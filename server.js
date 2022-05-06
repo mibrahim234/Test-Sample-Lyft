@@ -8,6 +8,16 @@ const app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
+// Return a JSON object with the key “return_string” and
+// a string containing every third letter from the original string
+const cutString = str => {
+    let prevStr = '';
+    const chars = str.split('');
+    for (let i = 2; i < chars.length; i+=3) {
+        prevStr += chars[i];
+    }
+}
+
 app.post('/test', (req, res) => {
     const string_to_cut = 
     res.json({return_string: string_to_cut})
