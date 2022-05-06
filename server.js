@@ -21,11 +21,18 @@ const cutString = str => {
 
 // Accept a POST request to the route “/test”
 //  post accepts “string_to_cut” as the request body
-// use cut string method and send newStr as the response
+// use cut string method and accept stringtocut as an arg
 app.post('/test', (req, res) => {
     const { string_to_cut } = req.body; 
-    res.json({return_string: string_to_cut})
-})
+
+    if (string_to_cut && typeof string_to_cut === 'string') {
+        res.json(cutString(string_to_cut))
+    } else {
+        res.status(400).send({
+            error: 'Expected Output: {string_to_cut: <string> }'
+        });
+    }
+});
 
 // Starts server 
 app.listen(PORT, () => {
