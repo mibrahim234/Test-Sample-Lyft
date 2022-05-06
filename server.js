@@ -13,7 +13,7 @@ app.use(express.urlencoded({ extended: true }));
 const cutString = str => {
     let newStr = '';
     const chars = str.split('');
-    for (let i = 2; i < chars.length; i+=3) {
+    for (let i = 2; i < chars.length; i += 3) {
         newStr += chars[i];
     }
     return {return_string: newStr };
@@ -28,6 +28,7 @@ app.post('/test', (req, res) => {
     if (string_to_cut && typeof string_to_cut === 'string') {
         res.json(cutString(string_to_cut))
     } else {
+        // sends error message if info is incorrect 
         res.status(400).send({
             error: 'Expected Output: {string_to_cut: <string> }'
         });
