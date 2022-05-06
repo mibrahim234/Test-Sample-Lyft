@@ -3,7 +3,8 @@ const express = require ('express')
 // create port--- initialize app 
 const PORT = process.env.PORT || 3001;
 const app = express();
-// handles json data (middleware)
+
+// set up middleware
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
@@ -12,6 +13,7 @@ app.post('/test', (req, res) => {
     res.json({return_string: string_to_cut})
 })
 
-app.listen(3000, () => {
-    console.log('On Port 3000!')
-    })
+// Starts server 
+app.listen(PORT, () => {
+    console.log(`API server now on port ${PORT}!`);
+  });
