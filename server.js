@@ -11,16 +11,19 @@ app.use(express.urlencoded({ extended: true }));
 // Return a JSON object with the key “return_string” and
 // a string containing every third letter from the original string
 const cutString = str => {
-    let prevStr = '';
+    let newStr = '';
     const chars = str.split('');
     for (let i = 2; i < chars.length; i+=3) {
-        prevStr += chars[i];
+        newStr += chars[i];
     }
-    return {return_string: prevStr };
+    return {return_string: newStr };
 };
 
+// Accept a POST request to the route “/test”
+//  post accepts “string_to_cut” as the request body
+// use cut string method and send newStr as the response
 app.post('/test', (req, res) => {
-    const string_to_cut = 
+    const { string_to_cut } = req.body; 
     res.json({return_string: string_to_cut})
 })
 
