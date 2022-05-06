@@ -19,7 +19,6 @@ const cutString = str => {
 };
 
 // Accept a POST request to the route “/test” which accepts one arg string_to_cut 
-// return a JSON obj with the key retrun_string and a string containing every third letter from the original string
 app.post('/test', (req, res) => {
     const { string_to_cut } = req.body; 
   // check to see if they are strings 
