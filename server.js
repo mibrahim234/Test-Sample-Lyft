@@ -8,8 +8,7 @@ const app = express();
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
 
-// Return a JSON object with the key “return_string” and
-// a string containing every third letter from the original string
+// Return a JSON object with the key “return_string” and  a string containing every third letter from the original string
 const cutString = str => {
     let newStr = '';
     const chars = str.split('');
@@ -19,10 +18,8 @@ const cutString = str => {
     return {return_string: newStr };
 };
 
-// POST request to the route “/test”
-//  post request accepts “string_to_cut” as the request body
-// response in json with cutString method 
-// and accept stringtocut as an arg
+// Accept a POST request to the route “/test” which accepts one arg string_to_cut 
+// return a JSON obj with the key retrun_string and a string containing every third letter from the original string
 app.post('/test', (req, res) => {
     const { string_to_cut } = req.body; 
   // check to see if they are strings 
