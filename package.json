@@ -1,5 +1,5 @@
 {
-  "name": "Test-Sample-Lyft",
+  "name": "testsamplelyft",
   "version": "1.0.0",
   "description": "Technical Sample * As part of your application, please submit a small code sample hosted on your favorite code repository hosting service (e.g. Github).",
   "main": "server.js",
