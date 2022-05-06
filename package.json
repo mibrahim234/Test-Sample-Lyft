@@ -1,0 +1,25 @@
+{
+  "name": "Test-Sample-Lyft",
+  "version": "1.0.0",
+  "description": "Technical Sample * As part of your application, please submit a small code sample hosted on your favorite code repository hosting service (e.g. Github).",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mibrahim234/Test-Sample-Lyft.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mibrahim234/Test-Sample-Lyft/issues"
+  },
+  "homepage": "https://github.com/mibrahim234/Test-Sample-Lyft#readme"
+}
