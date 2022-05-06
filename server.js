@@ -16,7 +16,8 @@ const cutString = str => {
     for (let i = 2; i < chars.length; i+=3) {
         prevStr += chars[i];
     }
-}
+    return {return_string: prevStr };
+};
 
 app.post('/test', (req, res) => {
     const string_to_cut = 
